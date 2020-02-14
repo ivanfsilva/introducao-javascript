@@ -20,12 +20,16 @@ for(var i = 0 ; i <= pacientes.length ; i++) {
         console.log("Peso inválido.");
         pesoEhValido = false;
         tdImc.textContent = "Peso Inválido !";
+        paciente.classList.add("paciente-invalido");
+        /* paciente.style.backgroundColor = "lightcoral"; */
     }
 
     if(altura < 0 || altura >= 3.0) {
         console.log("Altura inválida.");
         alturaEhValida = false;
-        tdAltura.textContent = "Altura Inválida !";
+        tdImc.textContent = "Altura Inválida !";
+        paciente.classList.add("paciente-invalido");
+        /* paciente.style.backgroundColor = "lightcoral"; */
     }
 
     if(pesoEhValido && alturaEhValida) {
